@@ -1,0 +1,32 @@
+services:
+  _defaults:
+    autoconfigure: true
+
+  _instanceof:
+    Contao\CoreBundle\Framework\FrameworkAwareInterface:
+      calls:
+        - [setFramework, ['@contao.framework']]
+
+  contaotoolbox.config.loader:
+    class: lindesbs\contaotoolbox\Service\CTBConfigLoader
+    arguments:
+      - '@contao.framework'
+      - '@kernel'
+
+  contaotoolbox.command.generate:
+    class: lindesbs\contaotoolbox\Command\CreateBasicStructureCommand
+    arguments:
+      - '@kernel'
+      - '@contaotoolbox.config.loader'
+
+  contaotoolbox.command.dcabuilder.generate:
+    class: lindesbs\contaotoolbox\Command\DCABuilderGenerate
+    arguments:
+      - '@contaotoolbox.config.loader'
+      - '@contao.framework'
+
+  contaotoolbox.command.dcabuilder.init:
+    class: lindesbs\contaotoolbox\Command\DCABuilderInit
+    arguments:
+      - '@contaotoolbox.config.loader'
+

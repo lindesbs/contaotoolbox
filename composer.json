@@ -1,0 +1,23 @@
+{
+  "name": "lindesbs/contaotoolbox",
+  "type": "contao-bundle",
+  "description": "Contao ToolBox",
+  "license": "MIT",
+  "keywords": ["contao"],
+  "homepage": "http://lindesbs.de",
+  "require": {
+    "php": "^7.4 || ^8.0 || ^8.1 || ^8.2",
+    "contao/core-bundle": "^4.9"
+  },
+  "conflict": {
+    "contao/manager-plugin": "<2.0 || >=3.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "lindesbs\\contaotoolbox\\": "src/"
+    }
+  },
+  "extra": {
+    "contao-manager-plugin": "lindesbs\\contaotoolbox\\ContaoManager\\Plugin"
+  }
+}

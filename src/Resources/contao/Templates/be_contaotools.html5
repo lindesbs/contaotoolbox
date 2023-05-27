@@ -1,0 +1,44 @@
+<div class="content">
+    <div class="tl_listing_container parent_view" id="tl_listing">
+        <h2><?= $this->labelExport ?></h2>
+        <hr>
+
+
+        <form class="tl_form" method="post" aria-label="<?= $this->labelSubmit; ?>">
+            <div class="tl_formbody">
+                <input type="hidden" name="FORM_SUBMIT" value="<?= $this->formId ?>">
+                <input type="hidden" name="REQUEST_TOKEN" value="<?= $this->requestToken ?>">
+
+                <ul class="mt-5">
+                    <li><?= $this->tableName ?></li>
+                    <li><?= $this->tableId ?></li>
+                    <li><?= $this->itemCount ?></li>
+
+                </ul>
+
+                <div class="tl_formbody_submit">
+                    <button type="submit" class="tl_submit" name="EXPORT_SUBMIT" value="getExport"><?= $this->
+                        labelSubmit ?>
+                    </button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="content">
+    <div class="tl_listing_container parent_view" id="tl_listing">
+        <h2><?= $this->labelImport ?></h2>
+        <hr>
+
+
+        <form class="tl_form" method="post" aria-label="Such- und Filterfunktionen">
+            <div class="tl_formbody">
+                <input type="hidden" name="FORM_SUBMIT" value="<?= $this->formId ?>">
+                <input type="hidden" name="REQUEST_TOKEN" value="<?= $this->requestToken ?>">
+
+            </div>
+        </form>
+    </div>
+</div>

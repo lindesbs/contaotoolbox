@@ -75,8 +75,22 @@ class DCAFieldsDTO extends AbstractDTO
      * @param array<DCACallback> $saveCallback
      * @param array<DCACallback> $xLabel
      */
-    public function __construct(string|array $label = '',
-                                string $inputType = '', bool $exclude = false, string $default = '', bool $toggle = false, string $sql = '', bool $search = false, bool $sorting = false, bool $filter = false, int $flag = -1, int $length = -1, array $options = [], string $foreignKey = '', string $reference = '', string $explanation = '', array $eval = [], array $relation = [], DCACallback $optionsCallback = null, DCACallback $inputFieldCallback = null, array $wizard = [], array $loadCallback = [], array $saveCallback = [], array $xLabel = [])
+    public function __construct(
+        string|array $label = '',
+        string $inputType = '',
+        bool $exclude = false,
+        string $default = '',
+        bool $toggle = false,
+        string $sql = '',
+        bool $search = false,
+        bool $sorting = false,
+        bool $filter = false,
+        int $flag = -1,
+        int $length = -1,
+        array $options = [],
+        string $foreignKey = '', string $reference = '', string $explanation = '', array $eval = [],
+        array $relation = [], DCACallback $optionsCallback = null, DCACallback $inputFieldCallback = null,
+        array $wizard = [], array $loadCallback = [], array $saveCallback = [], array $xLabel = [])
     {
         $this->label = $label;
         $this->inputType = $inputType;
